@@ -13,7 +13,11 @@ def load_library(path)
 end
 
 def get_japanese_emoticon(yaml, english_emoticon)
-  load_library(yaml)[:get_emoticon][english_emoticon]
+  output = load_library(yaml)[:get_emoticon][english_emoticon]
+  if output
+    return output
+  else
+    return 
 end
 
 def get_english_meaning
