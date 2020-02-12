@@ -21,8 +21,13 @@ def get_japanese_emoticon(yaml, english_emoticon)
   end
 end
 
-def get_english_meaning
-  # code goes here
+def get_english_meaning(yaml, japanese_emoticon)
+  output = load_library(yaml)[:get_meaning][english_emoticon]
+  if output
+    return output
+  else
+    return "Sorry, that emoticon was not found"
+  end
 end
 
 # p load_library('lib/emoticons.yml')
