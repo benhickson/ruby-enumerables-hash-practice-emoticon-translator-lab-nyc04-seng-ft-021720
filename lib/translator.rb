@@ -22,7 +22,7 @@ def get_japanese_emoticon(yaml, english_emoticon)
 end
 
 def get_english_meaning(yaml, japanese_emoticon)
-  output = load_library(yaml)[:get_meaning][english_emoticon]
+  output = load_library(yaml)[:get_meaning][japanese_emoticon]
   if output
     return output
   else
